@@ -9,7 +9,21 @@ package sortalgorithms;
  * new element = the value that we want to insert into the sorted partition
  */
 public class InsertionSort {
+
     public static void sort(int[] intArray) {
+        for(int firstUnsortedIndex = 1; firstUnsortedIndex < intArray.length; firstUnsortedIndex++) {
+            int unsortedValue = intArray[firstUnsortedIndex];
+            int i;
+            for (i = firstUnsortedIndex; i > 0 && intArray[i-1] > intArray[i]; i--) {
+                intArray[i] = intArray[i-1];
+            }
+            intArray[i] = unsortedValue;
+        }
+
+        printNumbers(intArray);
+    }
+
+    public static void anotherSort(int[] intArray) {
         int unsortedPosition = 1;
         while (unsortedPosition < intArray.length) {
             int unsortedValue = intArray[unsortedPosition];
@@ -23,19 +37,6 @@ public class InsertionSort {
             }
 
             unsortedPosition++;
-        }
-
-        printNumbers(intArray);
-    }
-
-    public static void anotherSort(int[] intArray) {
-        for(int firstUnsortedIndex = 1; firstUnsortedIndex < intArray.length; firstUnsortedIndex++) {
-            int unsortedValue = intArray[firstUnsortedIndex];
-            int i;
-            for (i = firstUnsortedIndex; i > 0 && intArray[i-1] > intArray[i]; i--) {
-                intArray[i] = intArray[i-1];
-            }
-            intArray[i] = unsortedValue;
         }
 
         printNumbers(intArray);
