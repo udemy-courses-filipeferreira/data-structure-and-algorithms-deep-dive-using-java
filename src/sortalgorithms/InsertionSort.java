@@ -1,5 +1,7 @@
 package sortalgorithms;
 
+import utils.PrintNumbers;
+
 /**
  *
  * sorted partition grows from left to right
@@ -20,7 +22,7 @@ public class InsertionSort {
             intArray[i] = unsortedValue;
         }
 
-        printNumbers(intArray);
+        PrintNumbers.print(intArray);
     }
 
     public static void anotherSort(int[] intArray) {
@@ -39,15 +41,7 @@ public class InsertionSort {
             unsortedPosition++;
         }
 
-        printNumbers(intArray);
-    }
-
-    private static void printNumbers(int[] intArray) {
-        String sortedNumbers = "";
-        for (int i = 0; i < intArray.length; i++) {
-            sortedNumbers += intArray[i] + " ";
-        }
-        System.out.println(sortedNumbers);
+        PrintNumbers.print(intArray);
     }
 
     public static void main(String[] args) {

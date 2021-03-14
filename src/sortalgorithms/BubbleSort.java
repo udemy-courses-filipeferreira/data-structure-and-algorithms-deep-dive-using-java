@@ -1,5 +1,7 @@
 package sortalgorithms;
 
+import utils.PrintNumbers;
+
 /**
  * Stable algorithm: we only swap numbers if position before is greater than the next position:
  * if (intArray[i] > intArray[i+1])  - line 12
@@ -18,11 +20,7 @@ public class BubbleSort {
             }
         }
 
-        String sortedNumbers = "";
-        for (int i = 0; i < intArray.length ; i++) {
-            sortedNumbers += intArray[i] + " ";
-        }
-        System.out.println(sortedNumbers);
+        PrintNumbers.print(intArray);
     }
 
     private static void swap(int[] intArray, int i, int j) {

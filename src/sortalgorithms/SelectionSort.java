@@ -1,5 +1,7 @@
 package sortalgorithms;
 
+import utils.PrintNumbers;
+
 /**
  * Unstable algorithm
  * largest position starts at 0
@@ -25,11 +27,7 @@ public class SelectionSort {
             swap(intArray, largestPosition, lastUnsortedIndex);
         }
 
-        String sortedNumbers = "";
-        for (int i = 0; i < intArray.length ; i++) {
-            sortedNumbers += intArray[i] + " ";
-        }
-        System.out.println(sortedNumbers);
+        PrintNumbers.print(intArray);
     }
 
     private static void swap(int[] intArray, int i, int j) {
